@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var pattern_xi = /a/;
+      "Abcdef".match(pattern_xi); //null
+      var pattern_oi = /a/i;  //  /a/i에서 i 대,소문자를 구분하지 않게 만듦.
+      "Abcdef".match(pattern_oi); //["A"]
+
+      var pattern_xg = /a/;
+      var str = "abcdefa";
+      str.match(pattern_xg);  //["a"]
+      var pattern_og = /a/g;  //g를 붙이면 모든 인자를 찾아줌.
+      str.match(pattern_og);  //["a", "a"];
+      //var pattern_ig = /a/ig; //모든 인자를 대소문자 구분 없이 찾아줌.
+    </script>
+  </body>
+</html>

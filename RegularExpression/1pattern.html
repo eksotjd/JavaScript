@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /* 정규표현식(특정 규칙을 가진 문자열의 집합을 표현)을 만드는 두가지 방법.
+      var pattern = /a/;
+      var pattern = new RegExp('a');
+      */
+
+      var pattern = /a/;    //찾고자 하는 정보
+      pattern.exec('abcde');  //찾고자 하는 정보가 담긴 정보 : [a]
+
+      var pattern = /a./;
+      pattern.exec('abcde');  //[ab]
+
+      var pattern = /a/;
+      pattern.exec('bcde');   //null
+
+      var pattern = /a/;
+      pattern.test('abcde');  //찾고자 하는 정보가 있는지 boolean : true
+    </script>
+  </body>
+</html>

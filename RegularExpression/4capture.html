@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //캡쳐란 그룹을 지정하고 그 지정한 그룹을 치환 등으로 활용하는 것.
+      var pattern = /(\w+)\s(\w+)/; //문자열 + 공백 + 문자열인 패턴을 정의.
+      var str = "coding everybody";
+      str.replace(pattern, "$2, $1"); //["everybody, coding"]
+      //$표시는 하나의 그룹을 의미함 : (\w+)
+    </script>
+  </body>
+</html>
