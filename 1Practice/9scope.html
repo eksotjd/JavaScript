@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //  자바스크립트
+      //  자바스크립트는 함수에 대한 유효범위만을 제공한다.
+      //자바스크립트의 지역변수는 함수에서만 유효하다.
+      for(var i = 0; i < 1; i++){
+        var name = "coding everybody";
+      }
+      alert(name);  //  coding everybody
+
+      /*자바
+      for(var i = 0; i < 1; i++){
+        var name = "coding everybody";
+      }
+      alert(name);  //  error
+      */
+
+      /*  정적유효범위
+      지역변수는 정의될 때의 값을 사용함.
+      var i = 5;
+      function a(){
+          var i = 10;
+          b();
+      }
+      function b(){
+          document.write(i);  //  5
+      }
+
+      a();
+      */
+    </script>
+  </body>
+</html>
