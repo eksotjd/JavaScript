@@ -34,8 +34,17 @@
 
       /*정렬
       var a = ['a', 'b', 'c', 'd', 'e'];
-      a.sort();   //정렬.
+      a.sort();   //  문자 순으로 정렬.
       a.reverse();    //역순으로 정렬.
+      */
+
+      /*  값으로서의 함수 사용
+      function sortfunc(a, b){
+      return a - b; //  return값이 양수이면 순차 음수이면 역순 같으면 0을 반환.
+      }
+      var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20];
+      alert(number.sort(sortfunc)); //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20]
+      //  sort함수는 인자를 함수인자로 받음.
       */
     </script>
   </body>
