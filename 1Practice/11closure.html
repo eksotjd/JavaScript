@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    //  클로저란 내부함수가 외부함수의 지역변수에 접근 할 수 있고, 외부함수는 외부함수의 지역변수를 사용하는 내부함수가 소멸될 때까지 소멸되지 않는 특성을 의미한다.
+
+    /*클로저를 사용 하지 않았을 때
+    var arr = []
+    for(var i = 0; i < 5; i++){
+        arr[i] = function(){
+            return i;
+        }
+    }
+    for(var index in arr) {
+        console.log(arr[index]());  //  5, 5, 5, 5, 5
+    }
+    */
+
+    var arr = []
+    for(var i = 0; i < 5; i++){
+        arr[i] = function(id){
+            return function(){
+              return id;
+            }
+        }(i);
+    }
+    for(var index in arr) {
+        console.log(arr[index]());  //  0, 1, 2, 3, 4
+    }
+    </script>
+  </body>
+</html>
