@@ -1,0 +1,41 @@
+﻿ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title></title>
+   </head>
+   <body>
+     <script type="text/javascript">
+        function Ultra(){}
+	Ultra.prototype.ultraProp = true;
+ 
+	function Super(){}
+	Super.prototype = new Ultra();
+ 
+	function Sub(){}
+	Sub.prototype = new Super();
+ 
+	var o = new Sub();
+	console.log(o.ultraProp);	//true
+
+	/*
+	function a(){}
+	console(a.prototype);	->	a {}	객체 a 를 리턴.
+	*/
+
+	function Ultra(){}
+	Ultra.prototype.ultraProp = true;
+ 
+	function Super(){}
+	Super.prototype = new Ultra();
+ 
+	function Sub(){}
+	Sub.prototype = new Super();
+	Sub.prototype. ultraProp = 3;
+ 
+	var o = new Sub();
+	console.log(o.ultraProp);	// 3
+    </script>
+  </body>
+</html>
+
