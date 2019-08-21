@@ -1,0 +1,28 @@
+﻿ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title></title>
+   </head>
+   <body>
+     <script type="text/javascript">
+        Object.prototype.contain = function(neddle) {
+    	for(var name in this){
+        	if(this[name] === neddle){
+       	     return true;
+       	 }
+   	 }
+   	 return false;
+	}
+	var o = {'name':'egoing', 'city':'seoul'}
+	console.log(o.contain('egoing'));
+	var a = ['egoing','leezche','grapittie'];
+	console.log(a.contain('leezche'));
+	for(var name in o){
+ 	   if(o.hasOwnProperty(name))	//	o라는 객체에 key값으로 name이 있는지 확인해줌
+  	      console.log(name);  
+	}
+    </script>
+  </body>
+</html>
+
